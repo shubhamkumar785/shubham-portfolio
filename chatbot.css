@@ -5,21 +5,25 @@
     right: 30px;
     width: 60px;
     height: 60px;
-    background: #111;
-    border: 2px solid #39FF14;
+    background: var(--accent-blue);
+    border: none;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    box-shadow: 0 0 20px rgba(57, 255, 20, 0.4);
+    box-shadow: 0 10px 25px rgba(0, 112, 224, 0.4);
     z-index: 9999;
     transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .chatbot-trigger:hover {
-    transform: scale(1.1) rotate(5deg);
-    box-shadow: 0 0 30px rgba(57, 255, 20, 0.6);
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0, 112, 224, 0.6);
+}
+
+.chatbot-trigger:hover svg {
+    transform: scale(1.1);
 }
 
 /* Tooltip bubble */
@@ -71,7 +75,8 @@
 .chatbot-trigger svg {
     width: 30px;
     height: 30px;
-    stroke: #39FF14;
+    stroke: #ffffff;
+    transition: transform 0.3s ease;
 }
 
 /* CHATBOT WINDOW */
@@ -79,20 +84,19 @@
     position: fixed;
     bottom: 100px;
     right: 30px;
-    width: 350px;
-    height: 500px;
-    background: rgba(13, 13, 13, 0.95);
-    border: 1px solid rgba(57, 255, 20, 0.2);
-    border-radius: 16px;
+    width: 380px;
+    height: 550px;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
-    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--shadow-lg);
     z-index: 10000;
     opacity: 0;
     visibility: hidden;
     transform: translateY(20px);
-    transition: all 0.4s ease;
-    backdrop-filter: blur(10px);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     overflow: hidden;
 }
 
@@ -104,9 +108,9 @@
 
 /* HEADER */
 .chatbot-header {
-    background: #111;
-    padding: 20px;
-    border-bottom: 1px solid rgba(57, 255, 20, 0.1);
+    background: #ffffff;
+    padding: 24px;
+    border-bottom: 1px solid var(--border-color);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -119,50 +123,56 @@
 }
 
 .status-dot {
-    width: 8px;
-    height: 8px;
-    background: #39FF14;
+    width: 10px;
+    height: 10px;
+    background: #10b981;
     border-radius: 50%;
-    box-shadow: 0 0 8px #39FF14;
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.4);
 }
 
 .chatbot-title span {
-    color: #fff;
-    font-weight: 600;
-    font-size: 0.95rem;
-    letter-spacing: 0.5px;
+    color: var(--text-primary);
+    font-weight: 500;
+    font-size: 1rem;
+    letter-spacing: -0.2px;
 }
 
 .close-chatbot {
-    background: none;
+    background: #f3f4f6;
     border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
     cursor: pointer;
-    color: #555;
-    transition: color 0.3s;
+    color: var(--text-secondary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
 }
 
 .close-chatbot:hover {
-    color: #39FF14;
+    background: #fee2e2;
+    color: var(--accent-red);
 }
 
 /* MESSAGES */
 .chatbot-messages {
     flex: 1;
-    padding: 20px;
+    padding: 24px;
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    scrollbar-width: thin;
-    scrollbar-color: #39FF14 transparent;
+    gap: 16px;
+    background: #f9fafb;
 }
 
 .chatbot-messages::-webkit-scrollbar {
-    width: 4px;
+    width: 6px;
 }
 
 .chatbot-messages::-webkit-scrollbar-thumb {
-    background: #39FF14;
+    background: var(--border-color);
     border-radius: 10px;
 }
 
@@ -183,18 +193,20 @@
 
 .message.bot {
     align-self: flex-start;
-    background: #1a1a1a;
-    color: #eee;
+    background: #ffffff;
+    color: var(--text-primary);
     border-bottom-left-radius: 2px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
 }
 
 .message.user {
     align-self: flex-end;
-    background: #39FF14;
-    color: #000;
+    background: var(--accent-blue);
+    color: #ffffff;
     border-bottom-right-radius: 2px;
     font-weight: 500;
+    box-shadow: 0 4px 12px rgba(0, 112, 224, 0.2);
 }
 
 /* OPTIONS */
@@ -207,61 +219,68 @@
 }
 
 .option-btn {
-    background: transparent;
-    border: 1px solid rgba(57, 255, 20, 0.3);
-    color: #39FF14;
-    padding: 6px 12px;
+    background: #ffffff;
+    border: 1px solid var(--border-color);
+    color: var(--accent-blue);
+    padding: 8px 16px;
     border-radius: 20px;
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+    font-weight: 500;
     cursor: pointer;
     transition: all 0.3s;
+    box-shadow: var(--shadow-sm);
 }
 
 .option-btn:hover {
-    background: rgba(57, 255, 20, 0.1);
-    border-color: #39FF14;
-    transform: scale(1.05);
+    background: var(--accent-blue);
+    color: #ffffff;
+    border-color: var(--accent-blue);
+    transform: translateY(-2px);
 }
 
 /* INPUT */
 .chatbot-input-area {
     padding: 20px;
-    background: #111;
-    border-top: 1px solid rgba(57, 255, 20, 0.1);
+    background: #ffffff;
+    border-top: 1px solid var(--border-color);
     display: flex;
-    gap: 10px;
+    gap: 12px;
 }
 
 .chatbot-input-area input {
     flex: 1;
-    background: #0d0d0d;
-    border: 1px solid #222;
-    color: #fff;
-    padding: 10px 15px;
-    border-radius: 8px;
-    font-size: 0.9rem;
+    background: #f3f4f6;
+    border: 1px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 12px 16px;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    transition: var(--transition);
 }
 
 .chatbot-input-area input:focus {
     outline: none;
-    border-color: #39FF14;
+    background: #ffffff;
+    border-color: var(--accent-blue);
+    box-shadow: 0 0 0 4px rgba(0, 112, 224, 0.1);
 }
 
 .send-msg {
-    background: #39FF14;
-    color: #000;
+    background: var(--accent-blue);
+    color: #ffffff;
     border: none;
-    width: 40px;
-    height: 40px;
-    border-radius: 8px;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: transform 0.3s;
+    transition: all 0.3s;
 }
 
 .send-msg:hover {
+    background: #0061c2;
     transform: scale(1.05);
 }
 

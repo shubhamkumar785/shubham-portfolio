@@ -49,6 +49,7 @@
     <link rel="stylesheet" href="footer.css">
     <link rel="stylesheet" href="testimonials.css">
     <link rel="stylesheet" href="chatbot.css">
+    <link rel="stylesheet" href="scale.css">
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -62,120 +63,51 @@
     <div class="gradient-light"></div>
 
     <header class="header">
-        <div class="nav-wrapper">
-            <nav class="navbar">
-                <div class="logo">
-                    <div class="logo-icon">
-                        <!-- <svg width="32" height="32" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="24" height="24" rx="6" fill="#39FF14" />
-                            <path d="M7 12L10 9M7 12L10 15M7 12H17M17 12L14 9M17 12L14 15" stroke="black"
-                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg> -->
-                    </div>
-                    <span class="logo-text">Shubham</span>
-                </div>
-
-                <ul class="nav-links">
-                    <li><a href="#hero" class="active">Home</a></li>
-                    <li><a href="#about">About Me</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#faq">FAQ</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-
-                <div class="nav-right">
-                    <a href="#contact" class="btn-hire">Connect</a>
-                    <button class="menu-toggle" aria-label="Toggle Menu">
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                        <span class="bar"></span>
-                    </button>
-                </div>
+        <div class="nav-container">
+            <a class="logo-bottom" href="#hero">Shubham</a>
+            <nav class="nav-pill" aria-label="Primary navigation">
+                <a href="#services">Service</a>
+                <a href="contact.html">Contact</a>
+                <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Resume</a>
             </nav>
         </div>
     </header>
 
     <main>
         <section class="hero" id="hero">
-            <div class="hero-content">
-                <!-- <div class="badge">
-                    <span class="pulse-dot"></span>
-                    Available for Freelance & Full-time
-                </div> -->
-
-                <h1>Crafting <span class="highlight">Digital</span><br class="mobile-hide"> Experiences</h1>
-
-                <p class="description">
-                    I'm a Java Developer and Cloud Engineer focused on designing scalable backend systems and
-                    cloud-native applications. I build high-performance, reliable solutions that handle real-world
-                    complexity with efficiency
-                </p>
-
-                <div class="cta-group">
-
-                    <!-- Download Resume -->
-                    <a href="resume.pdf" download class="btn btn-primary">
-                        Download Resume
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect width="18" height="18" x="3" y="4" rx="2" ry="2" />
-                            <line x1="16" y1="2" x2="16" y2="6" />
-                            <line x1="8" y1="2" x2="8" y2="6" />
-                            <line x1="3" y1="10" x2="21" y2="10" />
-                        </svg>
-                    </a>
-
-                    <!-- Let's Talk -->
-                    <a href="#contact" class="btn btn-secondary">
-                        Let's Talk
-                        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M5 12h14" />
-                            <path d="m12 5 7 7-7 7" />
-                        </svg>
-                    </a>
-
-                </div>
-
-                <div class="social-links">
-                    <a href="https://github.com/shubhamkumar785" class="social-icon" aria-label="GitHub" target="_blank"
-                        rel="noopener noreferrer">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path
-                                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-                            <path d="M9 18c-4.51 2-5-2-7-2" />
-                        </svg>
-                    </a>
-                    <a href="https://www.linkedin.com/in/shubham-kumar-5a85032a6/" class="social-icon"
-                        aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                            <rect width="4" height="12" x="2" y="9" />
-                            <circle cx="4" cy="4" r="2" />
-                        </svg>
-                    </a>
-                    <a href="mailto:shubhammpathak566@gmail.com" class="social-icon" aria-label="Gmail">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                            <rect width="20" height="16" x="2" y="4" rx="2" />
-                            <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                        </svg>
-                    </a>
-                </div>
+            <div class="hero-intro">
+                <h1>I build scalable backend systems and<br>cloud-native tools that turn complex<br>ideas into reliable digital products.</h1>
             </div>
 
-            <div class="hero-visual">
-                <img src="shubham.png" alt="Shubham Kumar" class="hero-image">
-            </div>
+            <div class="home-work-grid" aria-label="Featured portfolio work">
+                <article class="home-card home-card-blue home-card-wide">
+                    <h2>CampusSetu</h2>
+                    <p>A smart campus management platform for students and faculty with real-time features, secure APIs, and a scalable Spring Boot backend.</p>
+                    <a href="https://campussetu.in/" target="_blank" rel="noopener noreferrer">Check out CampusSetu</a>
+                </article>
 
-            <div class="scroll-indicator">
-                <span class="scroll-text jetbrains-mono">SCROLL</span>
-                <div class="mouse">
-                    <div class="wheel"></div>
+                <div class="home-card home-card-green home-card-icon" aria-hidden="true">
+                    <span class="spark spark-thin"></span>
+                </div>
+
+                <article class="home-card home-card-outline">
+                    <h2>ECommerce</h2>
+                    <p>A scalable ecommerce application with authentication, cart workflows, REST APIs, and database-backed order management.</p>
+                    <a href="https://github.com/shubhamkumar785/ecommerce" target="_blank" rel="noopener noreferrer">Check out ECommerce</a>
+                </article>
+
+                <div class="home-card home-card-green home-card-icon" aria-hidden="true">
+                    <span class="spark spark-bold"></span>
+                </div>
+
+                <article class="home-card home-card-outline home-card-large">
+                    <h2>Java Backend Impact</h2>
+                    <p>I design clean backend services using Java, Spring Boot, REST APIs, MySQL, MongoDB, and cloud practices for production-ready products.</p>
+                    <a href="resume.pdf" target="_blank" rel="noopener noreferrer">Check out my Resume</a>
+                </article>
+
+                <div class="home-card home-card-blue home-card-icon" aria-hidden="true">
+                    <span class="burst"></span>
                 </div>
             </div>
         </section>
@@ -196,8 +128,8 @@
                         <p>Projects Delivered</p>
                     </div>
                     <div class="stat-card">
-                        <h3>10+</h3>
-                        <p>Technical Skills</p>
+                        <h3>50+</h3>
+                        <p>GitHub Repo</p>
                     </div>
                     <div class="stat-card">
                         <h3>200+</h3>
@@ -265,12 +197,12 @@
                             <span>Based in India</span>
                         </div>
                         <div class="about-bio">
-                            <p>I am a passionate Java Developer with hands-on experience in real-time projects, focused
-                                on building scalable, secure, and high-performance backend systems. With a strong
-                                foundation in Computer Science Engineering, I specialize in Java, object-oriented
-                                programming, and backend development. I continuously enhance my skills by working with
-                                modern frameworks and cloud technologies. I combine strong problem-solving abilities
-                                with technical expertise to design efficient and reliable solutions.
+                            <p>I am a passionate <span class="bio-highlight">Java Developer</span> with hands-on experience in <span class="bio-highlight">real-time projects</span>, focused
+                                on building <span class="bio-highlight">scalable, secure, and high-performance backend systems</span>. With a strong
+                                foundation in <span class="bio-highlight">Computer Science Engineering</span>, I specialize in <span class="bio-underline">Java</span>, <span class="bio-underline">object-oriented
+                                programming</span>, and <span class="bio-underline">backend development</span>. I continuously enhance my skills by working with
+                                <span class="bio-highlight">modern frameworks and cloud technologies</span>. I combine strong problem-solving abilities
+                                with <span class="bio-underline">technical expertise</span> to design <span class="bio-highlight">efficient and reliable solutions</span>.
                             </p>
                         </div>
                         <!-- <a href="#" class="read-more">Read Full Story <span class="arrow">→</span></a>-->
@@ -590,8 +522,10 @@
                                     </svg>
                                 </div>
                                 <div class="testimonial-content">
-                                    <p class="message">"Delivered a highly efficient and scalable solution. The
-                                        attention to detail and performance optimization was impressive."</p>
+                                    <p class="message">"Delivered a <strong>highly efficient and scalable solution</strong> for our campus workflow. The
+                                        <strong>attention to detail</strong>, clean backend planning, and <strong>performance optimization</strong> were impressive.
+                                        Shubham understood the requirements quickly, communicated progress clearly, and handled changes with a practical mindset.
+                                        The final system felt reliable, well-structured, and ready for real users."</p>
                                     <div class="testimonial-footer">
                                         <div class="client-info">
                                             <div class="client-img">
@@ -626,8 +560,10 @@
                                     </svg>
                                 </div>
                                 <div class="testimonial-content">
-                                    <p class="message">"Built a complete eCommerce platform with smooth user experience
-                                        and secure backend. Highly recommended."</p>
+                                    <p class="message">"Built a <strong>complete eCommerce platform</strong> with <strong>smooth user experience</strong>
+                                        and <strong>secure backend</strong>. The application was organized, responsive, and easy to manage from a business
+                                        perspective. Shubham delivered clean API flows, dependable database handling, and thoughtful improvements that made
+                                        the product easier to scale. Highly recommended."</p>
                                     <div class="testimonial-footer">
                                         <div class="client-info">
                                             <div class="client-img">
@@ -662,21 +598,23 @@
                                     </svg>
                                 </div>
                                 <div class="testimonial-content">
-                                    <p class="message">"The fee management system simplified our workflow and improved
-                                        accuracy in reporting."</p>
+                                    <p class="message">"Delivered a <strong>highly efficient and scalable solution</strong> for our campus
+                                        workflow. The <strong>attention to detail</strong>, clean backend planning, and
+                                        <strong>performance optimization</strong> were impressive. Shubham understood the requirements quickly,
+                                        communicated progress clearly, and handled changes with a practical mindset."</p>
                                     <div class="testimonial-footer">
                                         <div class="client-info">
                                             <div class="client-img">
-                                                <img src="https://ui-avatars.com/api/?name=Sneha+Gupta&background=0D0D0D&color=00FF88"
-                                                    alt="Sneha Gupta">
+                                                <img src="https://ui-avatars.com/api/?name=Rahul+Sharma&background=0D0D0D&color=00FF88"
+                                                    alt="Rahul Sharma">
                                             </div>
                                             <div class="client-details">
-                                                <h4 class="name">Sneha Gupta</h4>
-                                                <p class="role">Admin Manager</p>
+                                                <h4 class="name">Rahul Sharma</h4>
+                                                <p class="role">Project Coordinator</p>
                                             </div>
                                         </div>
                                         <div class="testimonial-meta">
-                                            <span class="project-tag">Fee Management</span>
+                                            <span class="project-tag">CampusSetu</span>
                                             <span class="verified-badge"><svg xmlns="http://www.w3.org/2000/svg"
                                                     width="14" height="14" viewBox="0 0 24 24" fill="none"
                                                     stroke="currentColor" stroke-width="3" stroke-linecap="round"
@@ -698,21 +636,23 @@
                                     </svg>
                                 </div>
                                 <div class="testimonial-content">
-                                    <p class="message">"Professional, responsive, and technically strong. Delivered the
-                                        project before deadline."</p>
+                                    <p class="message">"Built a <strong>complete eCommerce platform</strong> with
+                                        <strong>smooth user experience</strong> and <strong>secure backend</strong>. The application was
+                                        organized, responsive, and easy to manage from a business perspective. Shubham delivered clean API
+                                        flows, dependable database handling, and thoughtful improvements."</p>
                                     <div class="testimonial-footer">
                                         <div class="client-info">
                                             <div class="client-img">
-                                                <img src="https://ui-avatars.com/api/?name=Client&background=0D0D0D&color=00FF88"
-                                                    alt="Client">
+                                                <img src="https://ui-avatars.com/api/?name=Amit+Verma&background=0D0D0D&color=00FF88"
+                                                    alt="Amit Verma">
                                             </div>
                                             <div class="client-details">
-                                                <h4 class="name">Client</h4>
-                                                <p class="role">Freelance Project</p>
+                                                <h4 class="name">Amit Verma</h4>
+                                                <p class="role">Startup Founder</p>
                                             </div>
                                         </div>
                                         <div class="testimonial-meta">
-                                            <span class="project-tag">Portfolio</span>
+                                            <span class="project-tag">E-Commerce</span>
                                             <span class="verified-badge"><svg xmlns="http://www.w3.org/2000/svg"
                                                     width="14" height="14" viewBox="0 0 24 24" fill="none"
                                                     stroke="currentColor" stroke-width="3" stroke-linecap="round"
@@ -817,129 +757,47 @@
                 </div>
             </div>
         </section>
-        <section class="contact" id="contact">
-            <div class="contact-container">
-
-                <!-- Header -->
-                <div class="contact-header">
-                    <h2>LET'S CONNECT</h2>
-                    <p>Ready to bring your ideas to life? Let's discuss your project and create something amazing
-                        together.</p>
+    </main>
+    <footer class="footer">
+        <div class="footer-cta">
+            <div class="nav-container">
+                <h2>Code Meets Creativity</h2>
+                <p class="footer-cta-subtitle">Passionate Java Developer focused on building scalable and efficient backend systems</p>
+                <div class="footer-socials footer-socials-cta" aria-label="Social links">
+                    <a href="https://www.linkedin.com/in/shubham-kumar-5a85032a6/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect width="4" height="12" x="2" y="9" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                    </a>
+                    <a href="https://github.com/shubhamkumar785" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                            <path d="M9 18c-4.51 2-5-2-7-2" />
+                        </svg>
+                    </a>
+                    <a href="https://x.com/Shubham55970890" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/shubhxm._" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                        </svg>
+                    </a>
                 </div>
-
-                <!-- ONLY FORM -->
-                <div class="contact-content">
-                    <div class="contact-card form-card">
-                        <h3>Let's Work Together</h3>
-                        <p>Hi, I'm Shubham! Fill out the form below to collaborate on your next project.</p>
-
-                        <form id="contact-form">
-                            <div class="form-grid">
-
-                                <div class="form-group">
-                                    <label for="first-name">First Name</label>
-                                    <input type="text" id="first-name" name="first_name" placeholder="John" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="last-name">Last Name</label>
-                                    <input type="text" id="last-name" name="last_name" placeholder="Doe" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="email">Email</label>
-                                    <input type="email" id="email" name="email" placeholder="john@example.com" required>
-                                </div>
-
-                                <div class="form-group">
-                                    <label for="phone">Phone</label>
-                                    <input type="text" id="phone" name="phone" placeholder="+91 XXXXXXXX">
-                                </div>
-
-                            </div>
-
-                            <div class="form-group full">
-                                <label for="message">Your Message</label>
-                                <textarea id="message" name="message" rows="5" placeholder="Type your message..."
-                                    required></textarea>
-                            </div>
-
-                            <div class="form-buttons">
-                                <button class="btn btn-send">Send</button>
-                                <button class="btn btn-reset">Reset</button>
-                            </div>
-                            <div id="form-status" class="form-status"></div>
-                        </form>
-                    </div>
-                </div>
-
             </div>
-        </section>
-        <footer class="footer">
-            <div class="footer-container">
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-main">
+            <div class="nav-container">
                 <div class="footer-grid">
-                    <!-- Column 1: Brand -->
-                    <div class="footer-col brand-col">
-                        <div class="footer-logo">
-                            <!-- <svg width="32" height="32" viewBox="0 0 24 24" fill="none"
-                                xmlns="http://www.w3.org/2000/svg">
-                                <rect width="24" height="24" rx="4" fill="#39FF14" />
-                                <path d="M7 12L10 9M7 12L10 15M7 12H17M17 12L14 9M17 12L14 15" stroke="black"
-                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                            </svg> -->
-                            <span class="logo-text">Shubham Kumar</span>
-                        </div>
-                        <p class="tagline orbitron">Code Meets Creativity</p>
-                        <p class="footer-desc">Passionate Java Developer focused on building scalable and efficient
-                            backend systems.</p>
-                        <a href="#contact" class="btn btn-hire">Connect</a>
-                        <div class="footer-socials">
-                            <a href="https://www.linkedin.com/in/shubham-kumar-5a85032a6/" class="social-icon-circle"
-                                aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path
-                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
-                                    <rect width="4" height="12" x="2" y="9" />
-                                    <circle cx="4" cy="4" r="2" />
-                                </svg>
-                            </a>
-                            <a href="https://github.com/shubhamkumar785" class="social-icon-circle" aria-label="GitHub"
-                                target="_blank" rel="noopener noreferrer">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path
-                                        d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
-                                    <path d="M9 18c-4.51 2-5-3-7-3" />
-                                </svg>
-                            </a>
-                            <a href="https://x.com/Shubham55970890" class="social-icon-circle" aria-label="Twitter"
-                                target="_blank" rel="noopener noreferrer">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path
-                                        d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z" />
-                                </svg>
-                            </a>
-                            <a href="https://www.instagram.com/shubhxm._" class="social-icon-circle"
-                                aria-label="Instagram" target="_blank" rel="noopener noreferrer">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <rect width="20" height="20" x="2" y="2" rx="5" ry="5" />
-                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
-                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-
-                    <!-- Column 2: Quick Links -->
-                    <div class="footer-col links-col">
-                        <h4 class="footer-title">Quick Links</h4>
+                    <div class="footer-col">
+                        <h4>QUICK LINKS</h4>
                         <ul class="footer-links">
                             <li><a href="#hero">Home</a></li>
                             <li><a href="#about">About Me</a></li>
@@ -948,10 +806,8 @@
                             <li><a href="#faq">FAQ</a></li>
                         </ul>
                     </div>
-
-                    <!-- Column 3: Services -->
-                    <div class="footer-col services-col">
-                        <h4 class="footer-title">Services</h4>
+                    <div class="footer-col">
+                        <h4>SERVICES</h4>
                         <ul class="footer-links">
                             <li><a href="#services">Backend Development</a></li>
                             <li><a href="#services">System Design</a></li>
@@ -960,56 +816,23 @@
                             <li><a href="#services">Cloud Engineering</a></li>
                         </ul>
                     </div>
-
-                    <!-- Column 4: Contact -->
-                    <div class="footer-col contact-col">
-                        <h4 class="footer-title">Contact</h4>
-                        <div class="footer-contact-info">
-                            <div class="contact-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" />
-                                    <circle cx="12" cy="10" r="3" />
-                                </svg>
-                                <span>India</span>
-                            </div>
-                            <div class="contact-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <rect width="20" height="16" x="2" y="4" rx="2" />
-                                    <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                                </svg>
-                                <span>shubhammpathak566@gmail.com</span>
-                            </div>
-                            <div class="contact-item">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
-                                    fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round">
-                                    <path
-                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                                </svg>
-                                <span>+91 7858024086</span>
-                            </div>
-                        </div>
-                        <a href="#contact" class="btn btn-touch">Get in Touch</a>
-                    </div>
-                </div>
-
-                <div class="footer-bottom">
-                    <div class="footer-divider"></div>
-                    <div class="bottom-content">
-                        <p class="copyright">&copy; 2025 Shubham Kumar. All rights reserved.</p>
-                        <div class="bottom-links">
-                            <a href="#">Privacy Policy</a>
-                            <a href="#">Terms of Service</a>
-                            <a href="#">Sitemap</a>
-                        </div>
+                    <div class="footer-col">
+                        <h4>CONTACT</h4>
+                        <ul class="footer-links">
+                            <li><a href="#"><svg class="footer-contact-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z" /><circle cx="12" cy="10" r="3" /></svg>India</a></li>
+                            <li><a href="mailto:shubhammpathak566@gmail.com"><svg class="footer-contact-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2" /><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" /></svg>shubhammpathak566@gmail.com</a></li>
+                            <li><a href="tel:+917858024086"><svg class="footer-contact-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" /></svg>+91 7858024086</a></li>
+                        </ul>
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
+        <div class="footer-bottom">
+            <div class="nav-container">
+                <p class="copyright">&copy; 2025 Shubham Kumar. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
 
         <!-- CHATBOT -->
         <div class="chatbot-trigger" id="chatbot-trigger">
@@ -1040,7 +863,7 @@
 
             <div class="chatbot-messages" id="chatbot-messages">
                 <div class="message bot">
-                    Hi! I'm Shubham's virtual assistant. How can I help you today?
+                    Hi! I'm virtual assistant. How can I help you today?
                 </div>
             </div>
 
