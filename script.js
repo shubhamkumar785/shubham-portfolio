@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Header Scroll Logic
     const header = document.querySelector('.header');
     const menuToggle = document.querySelector('.menu-toggle');
-    const navLinks = document.querySelector('.nav-links');
+    const navLinks = document.querySelector('.nav-links') || document.querySelector('.nav-pill');
 
     if (header) {
         window.addEventListener('scroll', () => {
@@ -15,18 +15,41 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Mobile Menu Toggle
-    if (menuToggle && navLinks) {
-        menuToggle.addEventListener('click', () => {
-            menuToggle.classList.toggle('active');
+    if (navLinks) {
+        const toggleTarget = menuToggle || navLinks;
+
+        toggleTarget.addEventListener('click', (event) => {
+            if (event.target.closest('a')) return;
+            if (window.innerWidth > 1023) return;
+
+            if (menuToggle) {
+                menuToggle.classList.toggle('active');
+            }
             navLinks.classList.toggle('active');
+            navLinks.setAttribute('aria-expanded', String(navLinks.classList.contains('active')));
         });
 
         // Close menu on link click
         navLinks.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
-                menuToggle.classList.remove('active');
+                if (menuToggle) {
+                    menuToggle.classList.remove('active');
+                }
                 navLinks.classList.remove('active');
+                navLinks.setAttribute('aria-expanded', 'false');
             });
+        });
+
+        document.addEventListener('click', (event) => {
+            if (window.innerWidth > 1023) return;
+            if (!navLinks.classList.contains('active')) return;
+            if (event.target.closest('.nav-pill')) return;
+
+            if (menuToggle) {
+                menuToggle.classList.remove('active');
+            }
+            navLinks.classList.remove('active');
+            navLinks.setAttribute('aria-expanded', 'false');
         });
     }
 
@@ -149,6 +172,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Update on resize
     window.addEventListener('resize', () => {
+        if (typeof cardsPerView === 'undefined' || typeof currentSlide === 'undefined' || typeof moveToSlide !== 'function') {
+            return;
+        }
+
         const newCardsPerView = window.innerWidth > 1100 ? 3 : (window.innerWidth > 992 ? 2 : 1);
         if (newCardsPerView !== cardsPerView) {
             location.reload(); // Simple reload for now as it's safer given the current structural implementation
